@@ -1,0 +1,12 @@
+[build]
+  # 1. Base Directory: Forces Netlify to start the build at the repo root.
+  base = "/"
+  # 2. Build Command: Runs your custom bun script from the root.
+  command = "bun install && bun run b:client"
+  # 3. Publish Directory: The output folder, relative to the base ("/").
+  publish = "client/dist"
+
+[build.environment]
+  # 4. Environment Variables: Ensures compatibility for bun and node.
+  NODE_VERSION = "20"
+  BUN_VERSION = "latest"
